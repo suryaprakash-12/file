@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    body{
+        background:linear-gradient(rgb(228, 57, 57),rgb(100, 34, 34));
+      
+        width: 100%;
+        background-size: cover;
+    }
+    .select {
+        padding: 8px 95px;
+        border-radius:2rem ;
+        margin-left: 130px;
+    }
+    .container{
+        position: relative;
+        height: 40%;
+        width: 50%;
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+    .heading{
+        font-style: italic;
+        font-size: 100pxp;
+        font-weight: bolder;
+    }
+    label{
+        font-size: 20px;
+        color:#fff;
+        font-style:italic;
+    }
+    button{
+        padding: 10px 50px;
+        margin-left: 200px;
+        border-radius: 2rem;
+    }
+    table{
+        position: relative;
+        float: right;
+        bottom: 700px;
+        margin-right: 520px;
+    }
+</style>
+<body>
+    <section class="container">
+        <h1 class="heading">GPA FOR 4TH SEMESTER</h1>
+        <label for="toc"><strong>Theory Of Computation</strong></label><br>
+        <label for="toc"><strong>Subject Code : <caption>CS3452</caption></strong><br>
+    <select name="toc" class="select" id="cs3452">
+        <option class="r">6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option>
+    </select>
+    <div id="y"></div><br> <br>   
+    <select class="select" id="cs3491">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option>
+    </select>
+    <div id="r"></div><br><br>
+    <select class="select" id="cs3492">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option>
+    </select>
+    <div id="b"></div><br><br>
+    <select class="select" id="cs3401">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option>
+    </select>
+    <div id="c"></div><br><br>
+    <select class="select" id="cs3451">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option>
+    </select>
+    <div id="d"></div><br><br>
+    <select class="select" id="ge3451">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option></select>
+    <div id="e"></div><br><br>
+    <select class="select" id="cs3461">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option></select>
+    <div id="f"></div><br><br>
+    <select class="select" id="cs3481">
+        <option >6</option>
+        <option >7</option>
+        <option>8</option>
+        <option>9</option>
+        <option >10</option></select>
+    <div id="g"></div><br><br>
+    <div id="h"></div>
+    <button onclick="hello()">button</button><br>
+    <textarea id="x"></textarea>  
+</section>
+
+<table border="2">
+    <tr>
+        <th>name</th>
+        <th> sub</th>
+        <th> grade</th>
+    </tr>
+</table>
+
+<footer>The above rights  have the shanmuganathan engineering college</footer>
+
+    <script>
+         function hello(){
+            var t = document.getElementById("cs3452").value ;
+            var y = document.getElementById("y").value ;
+            var s = document.getElementById("cs3491").value ;
+            var r = document.getElementById("r").value ;
+            var t1 = document.getElementById("cs3492").value ;
+            var y1 = document.getElementById("b").value ;
+            var t2 = document.getElementById("cs3401").value ;
+            var y2 = document.getElementById("c").value ;
+            var t3 = document.getElementById("cs3451").value ;
+            var y3 = document.getElementById("d").value ;
+            var t4 = document.getElementById("ge3451").value ;
+            var y4 = document.getElementById("e").value ;
+            var t5 = document.getElementById("cs3461").value ;
+            var y5 = document.getElementById("f").value ;
+            var t6 = document.getElementById("cs3481").value ;
+            var y6 = document.getElementById("g").value ;
+            var y7 = document.getElementById("h").value ;
+            var a=(+t * +3 + +s * +4 + +t1 * +3 + +t2 * +4 + +t3 * +3 + +t4 * +2 + +t5 * +1.5 + +t6 * +1.5 ) / +22;
+            document.getElementById("x").innerHTML=a;
+        }
+    </script> 
+</body>
+</html>
