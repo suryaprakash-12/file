@@ -4,63 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    *{margin: 0; padding: 0;}
-    body{
-        background:linear-gradient(rgb(228, 57, 57),rgb(100, 34, 34));
-      
-        width: 100%;
-        background-size: cover;
-    }
-    .select {
-        padding: 8px 95px;
-        border-radius:2rem ;
-        margin-left: 130px;
-    }
-    .container{
-        position: relative;
-        height: 40%;
-        width: 50%;
-        margin-left: 70px;
-        margin-top: 50px;
-    }
-    .heading{
-        font-style: italic;
-        font-size: 100pxp;
-        font-weight: bolder;
-    }
-    label{
-        font-size: 20px;
-        color:#fff;
-        font-style:italic;
-    }
-    button{
-        padding: 10px 50px;
-        margin-left: 200px;
-        border-radius: 2rem;
-    }
-    table{
-        position: relative;
-        float: right;
-        bottom: 700px;
-        margin-right: 520px;
-    }
-</style>
 <body>
+<section class="top">
+
+</section>    
+
+<section>
+<table align="right">
+    <tr>
+        <th>GRADE</th>
+        <th> POINTS</th>
+        <th>MARK ALLOCATION</th>
+    </tr>
+    <tr>
+        <td>O<br>(Outstanding)</td>
+        <td>10</td>
+        <td>91-100</td>
+    </tr>
+    <tr>
+        <td>A+<br>(Execellent)</td>
+        <td>9</td>
+        <td>81-90</td>
+    </tr>
+    <tr>
+        <td>A<br>(Very Good)</td>
+        <td>8</td>
+        <td>71-80</td>
+    </tr>
+    <tr>
+        <td>B+<br>(Good)</td>
+        <td>7</td>
+        <td>61-70</td>
+    </tr>
+    <tr>
+        <td>B<br>(Average)</td>
+        <td>6</td>
+        <td>51-60</td>
+    </tr>
+    <tr>
+        <td>C<br>(Satisfactory)</td>
+        <td>5</td>
+        <td> < 50 </td>
+    </tr>
+</table>
+</section>
+
+
     <section class="container">
-        <h1 class="heading">GPA FOR 4TH SEMESTER</h1>
-        <label for="toc"><strong>Theory Of Computation</strong></label><br>
-        <label for="toc"><strong>Subject Code : <caption>CS3452</caption></strong><br>
-    <select name="toc" class="select" id="cs3452">
-        <option class="r">6</option>
+        <h1 class="heading">GPA CALCULATOR FOR 4TH SEMESTER</h1>
+        <br>
+        <form action="" method="post">
+            <label for="Name"><strong class="size">Name:</strong></label>
+        <input  type="text" name="Name" class="name"><br><br>
+
+        <label for="Reg no"><strong class="size">Reg no:</strong></label>
+        <input  type="number" name="Reg no" class="Register"><br><br>
+
+        <label for="cs3452"><strong class="size">Theory Of Computation</strong></label><br>
+        <label for="cs3452"><strong>Subject Code : <strong class="color">CS3452</strong></strong><br>
+    <select name="cs3452" class="select" id="cs3452">
+        <option>select grade point</option>
+        <option>5</option>
+        <option >6</option>
         <option >7</option>
         <option>8</option>
         <option>9</option>
         <option >10</option>
     </select>
-    <div id="y"></div><br> <br>   
-    <select class="select" id="cs3491">
+
+
+    <div id="y"></div><br> <br>  
+    <label for="cs3491"><strong>Artificial Intelligence and Machine Learning</strong></label><br>
+        <label for="cs3491"><strong>Subject Code : <strong class="color">CS3491</strong></strong><br> 
+    <select class="select" id="cs3491" name="cs3491">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
@@ -68,7 +88,13 @@
         <option >10</option>
     </select>
     <div id="r"></div><br><br>
-    <select class="select" id="cs3492">
+
+
+    <label for="cs3492"><strong>Database Management System</strong></label><br>
+        <label for="cs3492"><strong>Subject Code : <strong class="color">CS3491</strong></strong><br> 
+    <select class="select" id="cs3492" name="cs3492">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
@@ -76,7 +102,12 @@
         <option >10</option>
     </select>
     <div id="b"></div><br><br>
-    <select class="select" id="cs3401">
+
+    <label for="cs3401"><strong>Algorithms</strong></label><br>
+        <label for="cs3401"><strong>Subject Code : <strong class="color">CS3401</strong></strong><br>
+    <select class="select" id="cs3401" name="cs3401">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
@@ -84,7 +115,12 @@
         <option >10</option>
     </select>
     <div id="c"></div><br><br>
-    <select class="select" id="cs3451">
+
+    <label for="cs3451"><strong>Introduction To Operating System</strong></label><br>
+    <label for="cs3451"><strong>Subject Code : <strong class="color">CS3401</strong></strong><br>
+    <select class="select" id="cs3451" name="cs3451">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
@@ -92,41 +128,53 @@
         <option >10</option>
     </select>
     <div id="d"></div><br><br>
-    <select class="select" id="ge3451">
+
+    <label for="ge3451"><strong>Environmental Science and Sustainability</strong></label><br>
+    <label for="ge3451"><strong>Subject Code : <strong class="color">GE3451</strong></strong><br>
+    <select class="select" id="ge3451" name="ge3451">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
         <option>9</option>
         <option >10</option></select>
     <div id="e"></div><br><br>
-    <select class="select" id="cs3461">
+
+    <label for="cs3461"><strong>Operating System Laboratory</strong></label><br>
+    <label for="cs3461"><strong>Subject Code : <strong class="color">CS3461</strong></strong><br>
+    <select class="select" id="cs3461" name="cs3461">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
         <option>9</option>
         <option >10</option></select>
     <div id="f"></div><br><br>
-    <select class="select" id="cs3481">
+
+    <label for="cs3481"><strong>Database Management System Laboratory</strong></label><br>
+    <label="cs3481"><strong>Subject Code : <strong class="color">CS3481</strong></strong></label><br>
+    <select class="select" id="cs3481" name="cs3481">
+        <option>select grade point</option>
+        <option>5</option>
         <option >6</option>
         <option >7</option>
         <option>8</option>
         <option>9</option>
         <option >10</option></select>
-    <div id="g"></div><br><br>
+    <div id="g"></div><br>
     <div id="h"></div>
-    <button onclick="hello()">button</button><br>
-    <textarea id="x"></textarea>  
+    <button onclick="hello()">click</button><br>
+    <label for="result"><strong >Grade Point Average <strong class="color">(GPA)</strong></strong></label><br>
+    <textarea id="result" name="result"></textarea></form>  
 </section>
 
-<table border="2">
-    <tr>
-        <th>name</th>
-        <th> sub</th>
-        <th> grade</th>
-    </tr>
-</table>
 
-<footer>The above rights  have the shanmuganathan engineering college</footer>
+<section>
+    <p class="end"><strong>The above copy rights have the cse department in shanmuganathan engineering college</strong>
+    </p>
+    </section>
 
     <script>
          function hello(){
@@ -148,7 +196,7 @@
             var y6 = document.getElementById("g").value ;
             var y7 = document.getElementById("h").value ;
             var a=(+t * +3 + +s * +4 + +t1 * +3 + +t2 * +4 + +t3 * +3 + +t4 * +2 + +t5 * +1.5 + +t6 * +1.5 ) / +22;
-            document.getElementById("x").innerHTML=a;
+            document.getElementById("result").innerHTML=a;
         }
     </script> 
 </body>
