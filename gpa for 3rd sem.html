@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form class="form" method="post" id="form">
+        <input type="text" name="name" id="n1" placeholder="name">
+        <input type="text" name="reg" id="n2" placeholder="name">
+        <input type="submit" id="submit" value="submit" onclick="ok()">
+        <textarea id="final" name="n3"></textarea>
+    </form>
+<script> 
+function ok(){
+    let n1 =document.getElementById('n1').value;
+    let n2 =document.getElementById('n2').value;
+    let n3= +n1 + +n2;
+    document.getElementById('final').innerHTML= n3;
+}
+</script>
+
+    <script>
+        const scriptURL="https://script.google.com/macros/s/AKfycbzWw1q-AUgNDgMT71Oo1bYApMt8Jgl3eHwb4S9T25ez9yQZ8Wo1tdWs2r3czDGv0GJl/exec"
+        const form = document.forms['form']
+
+        form.addEventListener('submit',e =>{
+            e.preventDefault()
+            fetch(scriptURL,{method: 'POST', body: new FormData(form)})
+            .then(response => console.log('success',response))
+            .catch(error => console.error('error',error.message))
+        })
+    </script>
+</body>
+</html>

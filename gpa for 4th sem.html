@@ -55,16 +55,16 @@
     <section class="container">
         <h1 class="heading">GPA CALCULATOR FOR 4TH SEMESTER</h1>
         <br>
-        <form action="" method="post">
+        <form class="form" id="form" method="post">
             <label for="Name"><strong class="size">Name:</strong></label>
-        <input  type="text" name="Name" class="name"><br><br>
+        <input  type="text" name="Name" class="name" required><br><br>
 
-        <label for="Reg no"><strong class="size">Reg no:</strong></label>
-        <input  type="number" name="Reg no" class="Register"><br><br>
+        <label for="Reg_no"><strong class="size">Reg no:</strong></label>
+        <input  type="number" name="Reg_no" class="Register" required><br><br>
 
         <label for="cs3452"><strong class="size">Theory Of Computation</strong></label><br>
         <label for="cs3452"><strong>Subject Code : <strong class="color">CS3452</strong></strong><br>
-    <select name="cs3452" class="select" id="cs3452">
+    <select name="cs3452" class="select" id="cs3452" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -78,7 +78,7 @@
     <div id="y"></div><br> <br>  
     <label for="cs3491"><strong>Artificial Intelligence and Machine Learning</strong></label><br>
         <label for="cs3491"><strong>Subject Code : <strong class="color">CS3491</strong></strong><br> 
-    <select class="select" id="cs3491" name="cs3491">
+    <select class="select" id="cs3491" name="cs3491" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -92,7 +92,7 @@
 
     <label for="cs3492"><strong>Database Management System</strong></label><br>
         <label for="cs3492"><strong>Subject Code : <strong class="color">CS3491</strong></strong><br> 
-    <select class="select" id="cs3492" name="cs3492">
+    <select class="select" id="cs3492" name="cs3492" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -105,7 +105,7 @@
 
     <label for="cs3401"><strong>Algorithms</strong></label><br>
         <label for="cs3401"><strong>Subject Code : <strong class="color">CS3401</strong></strong><br>
-    <select class="select" id="cs3401" name="cs3401">
+    <select class="select" id="cs3401" name="cs3401" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -118,7 +118,7 @@
 
     <label for="cs3451"><strong>Introduction To Operating System</strong></label><br>
     <label for="cs3451"><strong>Subject Code : <strong class="color">CS3401</strong></strong><br>
-    <select class="select" id="cs3451" name="cs3451">
+    <select class="select" id="cs3451" name="cs3451" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -131,7 +131,7 @@
 
     <label for="ge3451"><strong>Environmental Science and Sustainability</strong></label><br>
     <label for="ge3451"><strong>Subject Code : <strong class="color">GE3451</strong></strong><br>
-    <select class="select" id="ge3451" name="ge3451">
+    <select class="select" id="ge3451" name="ge3451" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -142,8 +142,8 @@
     <div id="e"></div><br><br>
 
     <label for="cs3461"><strong>Operating System Laboratory</strong></label><br>
-    <label for="cs3461"><strong>Subject Code : <strong class="color">CS3461</strong></strong><br>
-    <select class="select" id="cs3461" name="cs3461">
+    <formr="cs3461"><strong>Subject Code : <strong class="color">CS3461</strong></strong><br>
+    <select class="select" id="cs3461" name="cs3461" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -155,7 +155,7 @@
 
     <label for="cs3481"><strong>Database Management System Laboratory</strong></label><br>
     <label="cs3481"><strong>Subject Code : <strong class="color">CS3481</strong></strong></label><br>
-    <select class="select" id="cs3481" name="cs3481">
+    <select class="select" id="cs3481" name="cs3481" required>
         <option>select grade point</option>
         <option>5</option>
         <option >6</option>
@@ -165,9 +165,32 @@
         <option >10</option></select>
     <div id="g"></div><br>
     <div id="h"></div>
-    <button onclick="hello()">click</button><br>
+    <input type="checkbox" name="link" required><label for="link">Please check the options are selected</label>
+    <button onclick="hello()" id="submit">click</button><br>
+
     <label for="result"><strong >Grade Point Average <strong class="color">(GPA)</strong></strong></label><br>
-    <textarea id="result" name="result"></textarea></form>  
+    <textarea id="result" name="result"></textarea><br><br>
+    </form>
+</section>
+
+<section class=" container2">
+    
+        <h2><strong>CALCULATE YOUR CGPA</strong></h2>
+        <form class="form1" method="post" id="form1">
+            <label for="name"><strong class="size">Name:</strong></label>
+        <input  type="text" name="name" class="name" required><br><br>
+
+        <label for="Reg"><strong class="size">Reg no:</strong></label>
+        <input  type="number" name="Reg" class="Register" required><br><br>
+            <label for="third_sem_GPA">Third_sem_GPA</label><br>
+            <input type="text"  name="third_sem_GPA" id="n1" placeholder="name"><br>
+
+            <label for="fourth_sem_GPA">Fourth_sem_GPA</label><br>
+            <input type="text" name="fourth_sem_GPA" id="n2" placeholder="name"><br><br>
+            <input type="submit" id="button" value="submit" onclick="ok()"><br><br>
+            <textarea id="final" name="final"></textarea>
+        </form>
+    </form>
 </section>
 
 
@@ -199,5 +222,37 @@
             document.getElementById("result").innerHTML=a;
         }
     </script> 
+
+<script> 
+    function ok(){
+        let n1 =document.getElementById('n1').value;
+        let n2 =document.getElementById('n2').value;
+        let n3= +n1 + +n2;
+        document.getElementById('final').innerHTML= n3;
+    }
+    </script>
+
+<script>
+    const scriptURL="https://script.google.com/macros/s/AKfycbw23Vv5ht6U8EaO06PdfyRKo_3DrT-Oy9izK6Me3r9z155S100zf3f_AUYceDBA7LIC/exec"
+    const form = document.forms['form']
+
+    form.addEventListener('submit',e =>{
+        e.preventDefault()
+        fetch(scriptURL,{method: 'POST', body: new FormData(form)})
+        .then(response => console.log('success',response))
+        .catch(error => console.error('error',error.message))
+    })
+</script>
+<script>
+    const URL="https://script.google.com/macros/s/AKfycbw23Vv5ht6U8EaO06PdfyRKo_3DrT-Oy9izK6Me3r9z155S100zf3f_AUYceDBA7LIC/exec"
+    const form1 = document.forms['form1']
+
+    form1.addEventListener('submit',e =>{
+        e.preventDefault()
+        fetch(URL,{method: 'POST', body: new FormData(form1)})
+        .then(response => console.log('success',response))
+        .catch(error => console.error('error',error.message))
+    })
+</script>
 </body>
 </html>
