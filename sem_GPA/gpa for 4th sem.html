@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="web.png" type="image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GPA & CGPA CALCULATOR</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <d class="body1" background="cgpa.jpeg ">
 <section class="top">
 
 </section>    
@@ -54,6 +56,7 @@
 
     <section class="container">
         <h1 class="heading">GPA CALCULATOR FOR 4TH SEMESTER</h1>
+        <div class="image"><img src="cgpa.jpeg"></div>
         <br>
         <form class="form" id="form" method="post">
             <label for="Name"><strong class="size">Name:</strong></label>
@@ -172,32 +175,52 @@
     <textarea id="result" name="result"></textarea><br><br>
     </form>
 </section>
+<section class="container3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Fi_cibaChmSM9SwfYPGg1F5o7RU1QrqLIj6Nn1DwN0gwmNXk8XU9-JbJF32wFbWAlmc&usqp=CAU">
+<h1>Formula For GPA </h1>
+<p><strong><br>Grade Average Point(GPA) = (Grade Point * Credit Point)/Total Credit Point<br><br></strong></p>
+
+</section>
 
 <section class=" container2">
     
         <h2><strong>CALCULATE YOUR CGPA</strong></h2>
         <form class="form1" method="post" id="form1">
             <label for="name"><strong class="size">Name:</strong></label>
-        <input  type="text" name="name" class="name" required><br><br>
+        <input  type="text" name="name" class="name" placeholder="Enter Your Name" required><br><br>
 
         <label for="Reg"><strong class="size">Reg no:</strong></label>
-        <input  type="number" name="Reg" class="Register" required><br><br>
-            <label for="third_sem_GPA">Third_sem_GPA</label><br>
-            <input type="text"  name="third_sem_GPA" id="n1" placeholder="name"><br>
+        <input  type="number" name="Reg" class="Register" placeholder="Enter Your Reg_no" required><br><br>
 
-            <label for="fourth_sem_GPA">Fourth_sem_GPA</label><br>
-            <input type="text" name="fourth_sem_GPA" id="n2" placeholder="name"><br><br>
+            <label for="third_sem_GPA"><strong>Third_sem_GPA</strong></label><br>
+            <input type="text"  name="third_sem_GPA" id="n1" placeholder="Third_sem_GPA" required><br>
+
+            <label for="fourth_sem_GPA"><strong>Fourth_sem_GPA</strong></label><br>
+            <input type="text" name="fourth_sem_GPA" id="n2" placeholder="Fourth_sem_GPA" required><br><br>
+            <input type="checkbox" name="link" required><label for="link">Please check the options are selected</label>
             <input type="submit" id="button" value="submit" onclick="ok()"><br><br>
             <textarea id="final" name="final"></textarea>
         </form>
     </form>
 </section>
 
+<section class="inside">
+    
+    <h1 class="h1">Formula for the CGPA Calculation</h1><br>
+    <p class="paragraph">The formula used to evaluate and calculate CGPA is follows:</p>
+    <div class="formula">
+        <img src="formula.jpg">
+    </div>
+    <p class="paragraph">where<br>
+        n is number of all courses successfully cleared during the particular semester in the case of GPA<br><br>
+        GPi is the point corresponding to the grade obtained for each course<br><br>
+        Ci is the number of Credits assigned to the course</p>
+</section>
 
-<section>
+<footer>
     <p class="end"><strong>The above copy rights have the cse department in shanmuganathan engineering college</strong>
     </p>
-    </section>
+    </footer>
 
     <script>
          function hello(){
@@ -254,5 +277,6 @@
         .catch(error => console.error('error',error.message))
     })
 </script>
+</div>
 </body>
 </html>

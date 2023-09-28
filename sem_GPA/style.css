@@ -1,12 +1,45 @@
 *{margin: 0; padding: 0;}
 body{
-    background:linear-gradient(rgb(228, 57, 57),rgb(100, 34, 34));
+    background:linear-gradient(rgba(252, 249, 249, 0.596),rgb(233, 231, 231));
     background-size: cover;
-    
+}
+.container3{
+    position: absolute;
+    margin-left: 50%;
+    bottom: 20px;
+    top: 900px;
+    height: 500px;
+    width: 40%;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 3px 3px;
+}
+.container3 img{
+    margin-left: 20px;
+    margin-top: 10px;
+height: 200px;
+border-radius: 1rem;
+}
+.container3 h1,p{
+    margin-left: 10px;
+}
+.container3 p{
+    border: 1px solid black;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.paragraph{
+    color: #3f7f9c;
+    font-size: 23px;
+}
+.h1.h1{
+    font-size: 30px;
+}
+h2{
+    margin-left: 60px;
 }
 .top{
     padding: 30px;
-    width: 100%;
+    width: 95.5%;
     background-color: rgb(4, 4, 61);
 }
 .select {
@@ -28,7 +61,7 @@ body{
 }
 label{
     font-size: 20px;
-    color:#fff;
+    color:#3f7f9c;
     font-style:italic;
 }
 button,#button{
@@ -88,48 +121,28 @@ td{
     padding: 8px 65px;
     border-radius:2rem ;
     margin-left: 65px;
+}    
+.formula img{
+    margin-left: 15%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 60%;
+    height: 60%;
 }
-@media only screen and (max-width:600px){
-    
-    .top{
-    width: 90%;
-    padding: 20px;
-    }
-    table{
-        position: absolute;
-        display: flexbox;
-        margin-top: 1400px;
-        margin-left: 10px; 
-    }
-    .end{
-        margin-top: 120%;
-        width: 90%;
-    }
-    .container{
-    height: 30%;
-    width: 40%;
-    margin-left: 30px;
-    }
-   .container .select {
-        padding: 8px 65px;
-        margin-left: 10px;
-    }
-   .container #result{
-        margin-left: 40px;
-        padding: 1px 30px;
-        font-size: 15px;
-    }
-   .container button{
-        padding: 10px 50px;
-        margin-left: 150px;
-    }
-.container label{
-    font-size: 14px;
-   }
-   h1{
-    width: 200%;
-    font-size: 20px;
-   }
+.inside{
+    position: relative;
+    padding: 50px;
+    width: 70%;
+    margin-left:50px;
+    margin-top: 10px;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+}
+.image img{
+    width: 60%;
+    height: 50%;
+    border-radius: 0px 0px 30px 30px;
+    margin-top: 50px;
 }
 @media only screen and (max-width:900px){
     
