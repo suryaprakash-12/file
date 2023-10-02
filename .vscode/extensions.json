@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "ms-toolsai.jupyter-keymap"
+        "ms-toolsai.jupyter-keymap",
+        "wallabyjs.console-ninja",
+        "rodrigovallades.es7-react-js-snippets"
     ]
 }

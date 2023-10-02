@@ -1,13 +1,17 @@
 import './App.css';
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 function App(){
-const [state,statefn]=useState('hello')
+  function getData(val){
+const [state,statefn]=useState(null)
 console.log(state)
+  }
   return (
-
-<Apps onclick="statefn{statefn},state{state}"></Apps>
+    <div>
+      <h1>{state}</h1>
+<input type="text" onChange={getData} />
+</div> 
   );
 }
 
-export default Apps;
+export default App;
