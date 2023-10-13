@@ -1,17 +1,11 @@
-import './App.css';
-import React, {useState} from 'react';
+import React from 'react'
 
-function App(){
-  function getData(val){
-const [state,statefn]=useState(null)
-console.log(state)
-  }
-  return (
+
+function App() {
+return(
     <div>
-      <h1>{state}</h1>
-<input type="text" onChange={getData} />
-</div> 
-  );
+    </div>
+)
 }
 
-export default App;
+export default App

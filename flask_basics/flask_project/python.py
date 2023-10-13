@@ -10,9 +10,11 @@ def index():
 def login():
     if request.method =="POST":
         user =request.form["name"]
-        pass1 =request.form["password"]
-        return render_template("table.html",name = user,password=pass1)  
+        reg =request.form["Reg"]
+        third_sem_GPA =request.form["third_sem_GPA"]
+        fourth_sem_GPA =request.form["fourth_sem_GPA"]
+        return render_template("table.html",name = user,Reg=reg,third_sem_GPA=third_sem_GPA,fourth_sem_GPA=fourth_sem_GPA)   
     else:
-        return render_template("log.html")   
+        return render_template("log.html")
 
 app.run(debug=True)

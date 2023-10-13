@@ -6,11 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1">
+    <table border="1" name="/table">
         <tr><td>NAME</td>
         <td>{{name}}</td></tr>
-        <tr><td>password</td>
-        <td>{{password}}</td></tr>
+        <tr><td>REG</td>
+        <td>{{Reg}}</td></tr>
+        <tr><td>third_sem_GPA</td>
+        <td>{{third_sem_GPA}}</td></tr>  
+        <tr><td>fourth_sem_GPA</td>
+        <td>{{fourth_sem_GPA}}</td></tr>
     </table>
+    <script>
+        const URL="https://script.google.com/macros/s/AKfycbw23Vv5ht6U8EaO06PdfyRKo_3DrT-Oy9izK6Me3r9z155S100zf3f_AUYceDBA7LIC/exec"
+        const form1 = document.forms['form1']
+    
+        form1.addEventListener('submit',e =>{
+            e.preventDefault()
+            fetch(URL,{method: 'POST', body: new FormData(form1)})
+            .then(response => console.log('success',response))
+            .catch(error => console.error('error',error.message))
+        })
+    </script>
 </body>
 </html>
