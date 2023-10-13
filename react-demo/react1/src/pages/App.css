@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.form{
+    background:linear-gradient(rgb(104, 101, 101),rgb(182, 143, 143)) ;
+    height: 100vh;
+    
+}
+.container
+{
+    position:fixed;
+    width: 650px;
+    height:100px;
+    background:linear-gradient(rgb(136, 136, 156),rgb(95, 89, 89));
+    margin-left:340px;
+    margin-top:50px;
+
+}
