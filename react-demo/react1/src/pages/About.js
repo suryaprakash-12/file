@@ -1,4 +1,4 @@
-import nav from "../../react1/src/components/nav";
+import nav from "../react1/src/components/nav";
 import './App.css'
 
 export default function About(){

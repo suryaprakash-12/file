@@ -4,12 +4,12 @@ import './pages/App.css'
 import About from './pages/About';
 import {Route, RouterProvider, createBrowserRouter} from 'react-router-dom';
 import Header from './components/Header';
-
+import nav from './components/nav';
 
 const router =createBrowserRouter([
   {
   path:"/",
-  element:<Header/>
+  element:<nav/>
 },
 {
 path:"about", 
