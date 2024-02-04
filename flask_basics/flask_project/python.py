@@ -16,5 +16,4 @@ def login():
         return render_template("table.html",name = user,Reg=reg,third_sem_GPA=third_sem_GPA,fourth_sem_GPA=fourth_sem_GPA)   
     else:
         return render_template("log.html")
-
-app.run(debug=True)
+app.run()    

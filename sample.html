@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    
+    .class{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #191c29;
+    }
+    .card{
+        width: 300px;
+        height: 445;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 36px;
+        perspective: 2500px;
+         border-radius: 50%; 
+        cursor: pointer;
+    }
+    .card-logo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .wrapper{
+        transition: all 0.5s;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        /* background: #000; */
+         border-radius: 50%; 
+        /* box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,rgba(0,0,0,0.22) 0px 10px 10px; */
+    }
+    .wrapper img{
+        border-radius: 50%; 
+        box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,rgba(0,0,0,0.22) 0px 10px 10px;
+    }
+    .card:hover .wrapper{
+        transform:perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+         box-shadow: 2px 35px 32px -8px rgb(0,0,0,0.75);
+        -webkit-box-shadow:2px 35px 32px -8px rgb(0,0,0,0.75);
+        -moz-box-shadow:2px 35px 32px -8px rgb(0,0,0,0.75); 
+    }
+  
+    .wrapper::after{
+     bottom: 0;
+     opacity: 1;
+     background-image: linear-gradient(to bottom,
+      transparent 46%,rgba(12,13,19,0.5) 68%,rgba(12,13,19) 97%);
+    }
+    .wrapper::before{
+     top: 0;
+     height: 100%;
+     background-image: linear-gradient(to bottom, transparent 46%,rgba(12,13,19,0.5) 68%,rgba(12,13,19) 97%);
+    }
+    .card:hover .wrapper::before,
+    .wrapper::after{
+        opacity: 1;
+    }
+    .card:hover .wrapper::after{
+        height: 120px;
+    }
+    .card-logo1{
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        position: absolute;
+        bottom:10px ;
+    
+    }
+    .card:hover .card-logo{
+        opacity: 0.3;
+    }
+    .card:hover .card-logo1{
+        transform: translate3d(0%,-50px,100px);
+       
+    }
+    .card-logo2{
+        width: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        position: absolute;
+        z-index: -1;
+        filter: drop-shadow(2px 2px 2px #000);
+    }
+    .card:hover .card-logo2{
+        opacity: 1;
+        transform: translate3d(5%,-30%,200px);
+        
+    }
+
+</style>
+<body>
+    <section class="class">
+    <div class="card">
+       <div class="wrapper">
+        <img src="img5.jpg" class="card-logo">
+       </div>
+       <img src="star.png" class="card-logo1">
+       <img src="img.png" class="card-logo2">
+    </div>
+    </section>
+</body>
+</html>

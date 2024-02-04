@@ -2,6 +2,7 @@
     "recommendations": [
         "ms-toolsai.jupyter-keymap",
         "wallabyjs.console-ninja",
-        "rodrigovallades.es7-react-js-snippets"
+        "rodrigovallades.es7-react-js-snippets",
+        "tomoki1207.pdf"
     ]
 }

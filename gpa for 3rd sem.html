@@ -29,8 +29,8 @@ function ok(){
         form.addEventListener('submit',e =>{
             e.preventDefault()
             fetch(scriptURL,{method: 'POST', body: new FormData(form)})
-            .then(response => console.log('success',response))
-            .catch(error => console.error('error',error.message))
+            .then(response => window.location.assign('html.html'))
+            .catch(error => document.error('error',error.message))
         })
     </script>
 </body>
